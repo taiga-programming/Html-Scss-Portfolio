@@ -9,6 +9,11 @@
   opacity: 0;
   visibility: hidden;
   
+  @supports (-webkit-background-clip: blur(10px)) or (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    backdrop-filter: rgba($color-black, .3);
+  }
   
   &__content {
     @include absCenter;
