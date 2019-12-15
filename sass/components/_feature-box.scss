@@ -18,11 +18,12 @@
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     color: transparent;
     -webkit-background-clip: text;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 
-  &__text {
-
-  }
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
   }
